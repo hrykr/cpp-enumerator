@@ -6,7 +6,7 @@
 namespace enumerator
 {
     template <std::ranges::range T>
-    auto enumerate(T& container)
+    inline auto enumerate(T& container)
     {
         struct iterator {
             std::size_t i;
