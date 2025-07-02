@@ -10,7 +10,7 @@ Function works simillar to Python's `enumerate()` or Rust's `iter().enumerate()`
 #include "enumerator.hpp"
 
 std::vector<std::string> v = {"a", "b", "c"};
-for (auto [i, value] : enumerator::enumerate(v)) {
+for (const auto& [i, value] : enumerator::enumerate(v)) {
     std::cout << "String " << value << " has index " << i << std::endl;
 }
 ```
