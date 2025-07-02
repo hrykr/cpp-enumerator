@@ -22,7 +22,7 @@ namespace enumerator
 
             auto begin() { return iterator{ 0, container.begin() }; }
             auto end() { return iterator{ 0, container.end() }; }
-        }
+        };
 
         return iterable{ container };
     }
