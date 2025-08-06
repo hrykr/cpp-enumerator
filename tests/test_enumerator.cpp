@@ -1,4 +1,4 @@
-#include "enumerator.hpp"
+#include "enumerator/enumerator.hpp"
 #include <vector>
 #include <string>
 #include <cassert>

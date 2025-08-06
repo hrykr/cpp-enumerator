@@ -2,11 +2,11 @@
 
 Small header-only C++ function to mimic Python-style `enumerate()` ranges in for loops.\
 Used to automatically get index and value when enumerating lists with   for loop.\
-Function works simillar to Python's `enumerate()` or Rust's `iter().enumerate()`
+Function works simillar to Python's `enumerate()` or Rust's `.iter().enumerate()`
 
 ## Example
 
-```cpp
+```c++
 #include "enumerator.hpp"
 
 std::vector<std::string> v = {"a", "b", "c"};
@@ -14,20 +14,33 @@ for (const auto& [i, value] : enumerator::enumerate(v)) {
     std::cout << "String " << value << " has index " << i << std::endl;
 }
 ```
-#### Output
+>### Output
+>```
+>String a has index 0
+>String b has index 1
+>String c has index 2
+>```
 
-```
-String a has index 0
-String b has index 1
-String c has index 2
-```
+## Installation 
+> ### 1. Using CMake 
+> ```cmake
+> FetchContent_Declare(
+>         enumerator
+>         QUIET
+>         GIT_REPOSITORY https://github.com/hrykr/cpp-enumerator.git
+>         GIT_TAG v1.1.0
+> )
+> FetchContent_MakeAvailable(enumerator)
+> find_package(enumerator REQUIRED)
+>
+> target_link_libraries(%Your project name% PRIVATE enumerator::enumerator)
+> ```
 
-## Installation
-
-Copy `include/enumerator.hpp` into your project
+>### 2. Copy to project
+>Copy `include/enumerator/` into your project
 
 Then use it by:
 
-```cpp
-#include "enumerator.hpp"
+```c++
+#include "enumerator/enumerator.hpp"
 ```
