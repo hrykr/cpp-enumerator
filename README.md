@@ -28,12 +28,11 @@ for (const auto& [i, value] : enumerator::enumerate(v)) {
 >         enumerator
 >         QUIET
 >         GIT_REPOSITORY https://github.com/hrykr/cpp-enumerator.git
->         GIT_TAG v1.1.0
+>         GIT_TAG v1.2.0
 > )
 > FetchContent_MakeAvailable(enumerator)
-> find_package(enumerator REQUIRED)
 >
-> target_link_libraries(%Your project name% PRIVATE enumerator::enumerator)
+> target_link_libraries(your_project PRIVATE enumerator::enumerator)
 > ```
 
 >### 2. Copy to project
